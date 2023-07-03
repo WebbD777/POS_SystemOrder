@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            TextBox postText;
             panel1 = new Panel();
-            textBox7 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            cusRefText = new TextBox();
+            sexText = new ComboBox();
+            celltext = new TextBox();
+            addText = new TextBox();
+            emailText = new TextBox();
+            surText = new TextBox();
+            nameText = new TextBox();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
@@ -46,34 +46,44 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            button1 = new Button();
+            greenCount = new NumericUpDown();
+            yellowCount = new NumericUpDown();
+            blueCount = new NumericUpDown();
+            redCount = new NumericUpDown();
+            netLab = new Label();
+            subLab = new Label();
+            taxLab = new Label();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            nScentButton = new RadioButton();
+            scentButton = new RadioButton();
             checkBox4 = new CheckBox();
             checkBox3 = new CheckBox();
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
             panel3 = new Panel();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
+            postText = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)greenCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)yellowCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)blueCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)redCount).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.InactiveBorder;
-            panel1.Controls.Add(textBox7);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(textBox6);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(cusRefText);
+            panel1.Controls.Add(sexText);
+            panel1.Controls.Add(celltext);
+            panel1.Controls.Add(postText);
+            panel1.Controls.Add(addText);
+            panel1.Controls.Add(emailText);
+            panel1.Controls.Add(surText);
+            panel1.Controls.Add(nameText);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
@@ -88,65 +98,65 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // textBox7
+            // cusRefText
             // 
-            textBox7.Location = new Point(157, 19);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(125, 27);
-            textBox7.TabIndex = 8;
+            cusRefText.Location = new Point(157, 19);
+            cusRefText.Name = "cusRefText";
+            cusRefText.ReadOnly = true;
+            cusRefText.Size = new Size(125, 27);
+            cusRefText.TabIndex = 8;
             // 
-            // comboBox1
+            // sexText
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(131, 261);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 1;
-            comboBox1.Text = "Select Gender";
+            sexText.FormattingEnabled = true;
+            sexText.Items.AddRange(new object[] { "Male", "Female" });
+            sexText.Location = new Point(131, 261);
+            sexText.Name = "sexText";
+            sexText.Size = new Size(151, 28);
+            sexText.TabIndex = 1;
+            sexText.Text = "Select Gender";
             // 
-            // textBox6
+            // celltext
             // 
-            textBox6.Location = new Point(157, 190);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 7;
+            celltext.Location = new Point(157, 190);
+            celltext.Name = "celltext";
+            celltext.Size = new Size(125, 27);
+            celltext.TabIndex = 7;
             // 
-            // textBox5
+            // postText
             // 
-            textBox5.Location = new Point(157, 155);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 6;
+            postText.Location = new Point(157, 155);
+            postText.Name = "postText";
+            postText.Size = new Size(125, 27);
+            postText.TabIndex = 6;
             // 
-            // textBox4
+            // addText
             // 
-            textBox4.Location = new Point(157, 121);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 5;
+            addText.Location = new Point(157, 121);
+            addText.Name = "addText";
+            addText.Size = new Size(125, 27);
+            addText.TabIndex = 5;
             // 
-            // textBox3
+            // emailText
             // 
-            textBox3.Location = new Point(157, 227);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 4;
+            emailText.Location = new Point(157, 227);
+            emailText.Name = "emailText";
+            emailText.Size = new Size(125, 27);
+            emailText.TabIndex = 4;
             // 
-            // textBox2
+            // surText
             // 
-            textBox2.Location = new Point(157, 88);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 3;
+            surText.Location = new Point(157, 88);
+            surText.Name = "surText";
+            surText.Size = new Size(125, 27);
+            surText.TabIndex = 3;
             // 
-            // textBox1
+            // nameText
             // 
-            textBox1.Location = new Point(157, 55);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
+            nameText.Location = new Point(157, 55);
+            nameText.Name = "nameText";
+            nameText.Size = new Size(125, 27);
+            nameText.TabIndex = 2;
             // 
             // label8
             // 
@@ -225,14 +235,19 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.InactiveBorder;
-            panel2.Controls.Add(label14);
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label12);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(greenCount);
+            panel2.Controls.Add(yellowCount);
+            panel2.Controls.Add(blueCount);
+            panel2.Controls.Add(redCount);
+            panel2.Controls.Add(netLab);
+            panel2.Controls.Add(subLab);
+            panel2.Controls.Add(taxLab);
             panel2.Controls.Add(label11);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label9);
-            panel2.Controls.Add(radioButton2);
-            panel2.Controls.Add(radioButton1);
+            panel2.Controls.Add(nScentButton);
+            panel2.Controls.Add(scentButton);
             panel2.Controls.Add(checkBox4);
             panel2.Controls.Add(checkBox3);
             panel2.Controls.Add(checkBox2);
@@ -242,10 +257,76 @@
             panel2.Size = new Size(306, 535);
             panel2.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.Location = new Point(59, 449);
+            button1.Name = "button1";
+            button1.Size = new Size(177, 66);
+            button1.TabIndex = 18;
+            button1.Text = "Calculate";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // greenCount
+            // 
+            greenCount.Location = new Point(216, 123);
+            greenCount.Name = "greenCount";
+            greenCount.Size = new Size(74, 27);
+            greenCount.TabIndex = 17;
+            // 
+            // yellowCount
+            // 
+            yellowCount.Location = new Point(216, 90);
+            yellowCount.Name = "yellowCount";
+            yellowCount.Size = new Size(74, 27);
+            yellowCount.TabIndex = 16;
+            // 
+            // blueCount
+            // 
+            blueCount.Location = new Point(216, 56);
+            blueCount.Name = "blueCount";
+            blueCount.Size = new Size(74, 27);
+            blueCount.TabIndex = 15;
+            // 
+            // redCount
+            // 
+            redCount.Location = new Point(216, 21);
+            redCount.Name = "redCount";
+            redCount.Size = new Size(74, 27);
+            redCount.TabIndex = 14;
+            redCount.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // netLab
+            // 
+            netLab.AutoSize = true;
+            netLab.Location = new Point(221, 400);
+            netLab.Name = "netLab";
+            netLab.Size = new Size(45, 20);
+            netLab.TabIndex = 13;
+            netLab.Text = "R0.00";
+            // 
+            // subLab
+            // 
+            subLab.AutoSize = true;
+            subLab.Location = new Point(221, 359);
+            subLab.Name = "subLab";
+            subLab.Size = new Size(45, 20);
+            subLab.TabIndex = 12;
+            subLab.Text = "R0.00";
+            // 
+            // taxLab
+            // 
+            taxLab.AutoSize = true;
+            taxLab.Location = new Point(221, 323);
+            taxLab.Name = "taxLab";
+            taxLab.Size = new Size(45, 20);
+            taxLab.TabIndex = 11;
+            taxLab.Text = "R0.00";
+            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(25, 471);
+            label11.Location = new Point(14, 400);
             label11.Name = "label11";
             label11.Size = new Size(73, 20);
             label11.TabIndex = 10;
@@ -254,7 +335,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(25, 430);
+            label10.Location = new Point(14, 359);
             label10.Name = "label10";
             label10.Size = new Size(94, 20);
             label10.TabIndex = 1;
@@ -263,34 +344,34 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(25, 391);
+            label9.Location = new Point(14, 320);
             label9.Name = "label9";
             label9.Size = new Size(90, 20);
             label9.TabIndex = 9;
             label9.Text = "Tax Amount:";
             // 
-            // radioButton2
+            // nScentButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(144, 202);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(117, 24);
-            radioButton2.TabIndex = 5;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Non-Scented";
-            radioButton2.UseVisualStyleBackColor = true;
+            nScentButton.AutoSize = true;
+            nScentButton.Location = new Point(144, 202);
+            nScentButton.Name = "nScentButton";
+            nScentButton.Size = new Size(117, 24);
+            nScentButton.TabIndex = 5;
+            nScentButton.TabStop = true;
+            nScentButton.Text = "Non-Scented";
+            nScentButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // scentButton
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(25, 202);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(83, 24);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Scented";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            scentButton.AutoSize = true;
+            scentButton.Location = new Point(25, 202);
+            scentButton.Name = "scentButton";
+            scentButton.Size = new Size(83, 24);
+            scentButton.TabIndex = 4;
+            scentButton.TabStop = true;
+            scentButton.Text = "Scented";
+            scentButton.UseVisualStyleBackColor = true;
+            scentButton.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // checkBox4
             // 
@@ -340,33 +421,6 @@
             panel3.Size = new Size(351, 535);
             panel3.TabIndex = 2;
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(232, 394);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 20);
-            label12.TabIndex = 11;
-            label12.Text = "label12";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(232, 430);
-            label13.Name = "label13";
-            label13.Size = new Size(58, 20);
-            label13.TabIndex = 12;
-            label13.Text = "label13";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(232, 471);
-            label14.Name = "label14";
-            label14.Size = new Size(58, 20);
-            label14.TabIndex = 13;
-            label14.Text = "label14";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -382,6 +436,10 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)greenCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)yellowCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)blueCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)redCount).EndInit();
             ResumeLayout(false);
         }
 
@@ -396,17 +454,17 @@
         private Label label5;
         private Label label8;
         private Label label7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox textBox7;
-        private ComboBox comboBox1;
+        private TextBox celltext;
+        private TextBox postText;
+        private TextBox addText;
+        private TextBox emailText;
+        private TextBox surText;
+        private TextBox nameText;
+        private TextBox cusRefText;
+        private ComboBox sexText;
         private Panel panel2;
         private Panel panel3;
-        private RadioButton radioButton1;
+        private RadioButton scentButton;
         private CheckBox checkBox4;
         private CheckBox checkBox3;
         private CheckBox checkBox2;
@@ -414,9 +472,14 @@
         private Label label11;
         private Label label10;
         private Label label9;
-        private RadioButton radioButton2;
-        private Label label14;
-        private Label label13;
-        private Label label12;
+        private RadioButton nScentButton;
+        private Label netLab;
+        private Label subLab;
+        private Label taxLab;
+        private NumericUpDown redCount;
+        private NumericUpDown greenCount;
+        private NumericUpDown yellowCount;
+        private NumericUpDown blueCount;
+        private Button button1;
     }
 }
