@@ -64,6 +64,8 @@
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
             panel3 = new Panel();
+            listBox1 = new ListBox();
+            receiptButton = new Button();
             postText = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -71,7 +73,15 @@
             ((System.ComponentModel.ISupportInitialize)yellowCount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)blueCount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)redCount).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
+            // 
+            // postText
+            // 
+            postText.Location = new Point(157, 155);
+            postText.Name = "postText";
+            postText.Size = new Size(125, 27);
+            postText.TabIndex = 6;
             // 
             // panel1
             // 
@@ -105,6 +115,7 @@
             cusRefText.ReadOnly = true;
             cusRefText.Size = new Size(125, 27);
             cusRefText.TabIndex = 8;
+            cusRefText.TextChanged += cusRefText_TextChanged;
             // 
             // sexText
             // 
@@ -122,13 +133,6 @@
             celltext.Name = "celltext";
             celltext.Size = new Size(125, 27);
             celltext.TabIndex = 7;
-            // 
-            // postText
-            // 
-            postText.Location = new Point(157, 155);
-            postText.Name = "postText";
-            postText.Size = new Size(125, 27);
-            postText.TabIndex = 6;
             // 
             // addText
             // 
@@ -416,10 +420,31 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.InactiveBorder;
+            panel3.Controls.Add(listBox1);
+            panel3.Controls.Add(receiptButton);
             panel3.Location = new Point(633, 12);
             panel3.Name = "panel3";
             panel3.Size = new Size(351, 535);
             panel3.TabIndex = 2;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Location = new Point(3, 4);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(345, 424);
+            listBox1.TabIndex = 2;
+            // 
+            // receiptButton
+            // 
+            receiptButton.Location = new Point(100, 452);
+            receiptButton.Name = "receiptButton";
+            receiptButton.Size = new Size(185, 63);
+            receiptButton.TabIndex = 0;
+            receiptButton.Text = "Get receipt";
+            receiptButton.UseVisualStyleBackColor = true;
+            receiptButton.Click += receiptButton_Click;
             // 
             // Form1
             // 
@@ -440,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)yellowCount).EndInit();
             ((System.ComponentModel.ISupportInitialize)blueCount).EndInit();
             ((System.ComponentModel.ISupportInitialize)redCount).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -481,5 +507,7 @@
         private NumericUpDown yellowCount;
         private NumericUpDown blueCount;
         private Button button1;
+        private Button receiptButton;
+        private ListBox listBox1;
     }
 }
